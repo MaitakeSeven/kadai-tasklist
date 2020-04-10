@@ -1,6 +1,5 @@
 class TasksController < ApplicationController
-    before_action :login_now?,only:[:index,:create,:destroy
-    ,:edit,:update]
+    before_action :login_now?,only:[:index,:show,:new,:create,:destroy]
     
     def index 
         @tasks = Task.all
