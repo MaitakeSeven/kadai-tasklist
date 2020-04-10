@@ -1,5 +1,8 @@
 class TasksController < ApplicationController
-    def index
+    before_action :login_now?,only:[:index,:create,:destroy
+    ,:edit,:update]
+    
+    def index 
         @tasks = Task.all
     end
 
